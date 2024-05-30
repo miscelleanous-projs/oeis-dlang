@@ -1,0 +1,4 @@
+{
+	"description": "OEIS 245788 - n times the number of 1's in the binary expansion of n.",
+	"name": "a245788"
+}
