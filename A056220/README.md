@@ -17,6 +17,19 @@ void main() {
     a056220.take(50).writeln;
 }
 ```
+Alternative:
+
+[Sequence](https://dlang.org/library/std/range/sequence.html) with function in string form...
+
+```d
+import std.stdio, std.range;
+
+void main() {
+    auto a056220 = sequence!((a, n) => (-1+cast(int)(n^^2)*2))();
+    
+    a056220.take(50).writeln;
+}
+```
 ## Output
 
 ```text
