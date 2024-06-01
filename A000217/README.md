@@ -1,4 +1,6 @@
 # OEIS [A000217](https://oeis.org/A000217) - Implementation in D
+
+ Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n.
  
 `a(n) = 2*a(n-1)-a(n-2)+1, where a(0) = 0 and a(1) = 1`
 
