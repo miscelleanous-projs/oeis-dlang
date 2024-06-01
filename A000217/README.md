@@ -10,7 +10,7 @@
 import std.stdio, std.range;
 
 void main() {
-	auto a000217 = recurrence!("2*a[n-1] - a[n-2] + 1")(0, 1);
+    auto a000217 = recurrence!("2*a[n-1] - a[n-2] + 1")(0, 1);
     
     a000217.take(54).writeln;
 }
