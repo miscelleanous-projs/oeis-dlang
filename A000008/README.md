@@ -1,9 +1,7 @@
 # OEIS [A000008](https://oeis.org/A000008) - Implementation in D
 
- Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n.
+ Number of ways of making change for n cents using coins of 1, 2, 5, 10 cents or the number of partitions of n into parts 1, 2, 5, and 10..
  
-`a(n) = 2*a(n-1)-a(n-2)+1, where a(0) = 0 and a(1) = 1`
-
 ## Source code
 
 [Recurrence](https://dlang.org/library/std/range/recurrence.html) with function in string form...
