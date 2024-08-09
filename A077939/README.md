@@ -75,19 +75,3 @@ OEIS - A077939
 
 [1, 2, 5, 13, 33, 84, 214, 545, 1388, 3535, 9003, 22929, 58396, 148724, 378773, 964666, 2456829, 6257097, 15935689, 40585304, 103363394, 263247781, 670444260, 1707499695, 4348691431, 11075326817, 28206844760, 71837707768, 182957587113, 465959726754]
 ```
-
-## Proof
-
-The expansion "itself" calculated with [Pari GP](https://pari.math.u-bordeaux.fr/). Judge by yourself... it yields the same output as the D program above.
-
-```Pari
-(15:23) gp > Vec(1/(1 - 2*x - x^2 - x^3) + O(x^30))
-%1 = [1, 2, 5, 13, 33, 84, 214, 545, 1388, 3535, 9003, 22929, 58396, 148724, 378773, 964666, 2456829, 6257097, 15935689, 40585304, 103363394, 263247781, 670444260, 1707499695, 4348691431, 11075326817, 28206844760, 71837707768, 182957587113, 465959726754]
-(15:23) gp >
-```
-
-I wish I could do the `Expansion`by means of [Dlang](https://dlang.org) itself but the standard library doesn't provide anything ready to handle polynomes as needed hence Pari GP comes to the rescue!
-
-On the other side I can't find 🧐 some custom dub package capable of doing the Job. I Rust lots of promising crates are available.
-
-Maybe rolling my own is the way to go... 🤔
