@@ -4,8 +4,6 @@
  
 ## Source code
 
-[Recurrence](https://dlang.org/library/std/range/recurrence.html) with function in string form...
-
 ```
 import std.stdio: writeln;
 import std.range: iota;
