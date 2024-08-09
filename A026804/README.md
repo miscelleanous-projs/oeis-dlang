@@ -1,6 +1,6 @@
 # OEIS [A026804](https://oeis.org/A026804) - Implementation in D
 
-
+Number of partitions of n in which the least part is odd.
  
 ## Source code
 
