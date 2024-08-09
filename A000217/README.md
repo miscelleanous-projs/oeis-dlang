@@ -12,7 +12,8 @@ Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n.
 import std.stdio, std.range;
 
 void main() {
-    auto a000217 = recurrence!("2*a[n-1] - a[n-2] + 1")(0, 1);
+    auto a000217 = recurrence!("-a[n-2]+2*a[n-1]+1")(0, 1);
+    //auto a000217 = recurrence!("2*a[n-1] - a[n-2]+")(0, 1, 3);
     
     a000217.take(54).writeln;
 }
