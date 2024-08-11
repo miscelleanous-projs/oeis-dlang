@@ -2,6 +2,9 @@
 
 The zero sequence.
 
+## Source code
+
+[Recurrence](https://dlang.org/library/std/range/recurrence.html) with function in string form...
 
 ```d
 import std.stdio;
