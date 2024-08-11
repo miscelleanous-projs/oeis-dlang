@@ -10,6 +10,9 @@ The positive integers. Also called the natural numbers, the whole numbers or the
 // OEIS A000027
 // https://oeis.org/A000027
 
+import std.stdio;
+import std.range;
+
 // (20:49) gp > Vec(x/(1-x)^2+O(x^78))
 // %32 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 //        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
