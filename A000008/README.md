@@ -6,25 +6,26 @@
 
 [Recurrence](https://dlang.org/library/std/range/recurrence.html) with function in string form...
 
-```d
+```
 // OEIS A000008
 // https://oeis.org/A000008
 
 import std.stdio;
 import std.range;
+import std.algorithm;
 
-// (20:49) gp > Vec(x/(1-x)^2+O(x^78))
-// %32 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-//        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
-//        41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
-//        61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77]
+// (14:05) gp > Vec( 1/((1-x)*(1-x^2)*(1-x^5)*(1-x^10)) + O(x^20) )
+// %10 = [1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 11, 12, 15, 16, 19, 22, 25, 28, 31, 34]
 
-enum strFrmFunc = "-a[n-2]+2*a[n-1]";
-auto a000027Rec = recurrence!(strFrmFunc)(1u, 2u);
+// Port of 
+// LinearRecurrence[{1, 1, -1, 0, 1, -1, -1, 1, 0, 1, -1, -1, 1, 0, -1, 1, 1, -1}, {1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 11, 12, 15, 16, 19, 22, 25, 28}, 100]
+
+enum strFrmFunc = "a[n-1]+a[n-2]-a[n-3]+a[n-5]-a[n-6]-a[n-7]+a[n-8]+a[n-10]-a[n-11]-a[n-12]+a[n-13]-a[n-15]+a[n-16]+a[n-17]-a[n-18]";
+auto a000008Rec = recurrence!(strFrmFunc)(1u, 1u, 2u, 2u, 3u, 4u, 5u, 6u, 7u, 8u, 11u, 12u, 15u, 16u, 19u, 22u, 25u, 28u);
 
 void main()
 {
-	a000027Rec.take(77).writeln;
+	a000008Rec.take(60+1).writeln;
 }
 ```
 ## Output
