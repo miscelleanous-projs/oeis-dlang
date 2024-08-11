@@ -6,7 +6,7 @@
 
 [Recurrence](https://dlang.org/library/std/range/recurrence.html) with function in string form...
 
-```
+```d
 // OEIS A000008
 // https://oeis.org/A000008
 
