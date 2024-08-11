@@ -1,4 +1,4 @@
-
+# OEIS [A000004](https://oeis.org/A000004) - Implementation in D
 
 The zero sequence.
 
