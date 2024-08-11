@@ -1,3 +1,4 @@
+# OEIS [A007798](https://oeis.org/A007798) - Implementation in D
 
 Expected number of random moves in Tower of Hanoi problem with n disks starting with a randomly chosen position and ending at a position with all disks on the same peg.
 
