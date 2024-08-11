@@ -16,7 +16,13 @@ The positive integers. Also called the natural numbers, the whole numbers or the
 //        41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
 //        61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77]
 
+enum strFrmFunc = "-a[n-2]+2*a[n-1]";
+auto a000027Rec = recurrence!(strFrmFunc)(1u, 2u);
 
+void main()
+{
+	a000027Rec.take(60+1).writeln;
+}
 
 
 ```
