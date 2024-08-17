@@ -4,7 +4,7 @@ d(n) (also called tau(n) or sigma_0(n)), the number of divisors of n.
 
 ## Source code
 
-[Sequence](https://dlang.org/library/std/range/sequence.html) with function in ambda form...
+[Sequence](https://dlang.org/library/std/range/sequence.html) with function in lambda form...
 
 ```d
 import std.stdio;
