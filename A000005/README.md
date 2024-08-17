@@ -34,7 +34,7 @@ size_t numdiv(size_t n) {
         ;
 }
 
-auto a000005Seq = sequence!((a,n) => numdiv(n+1));
+auto a000005Seq = sequence!((a, n) => numdiv(n+1));
 
 void main()
 {
