@@ -12,7 +12,7 @@ import std.range;
 
 
 // >pariGP<
-// Vec(x^2/(1-x-x^2) + O(x^(41+1)))
+// Vec(x^2/(1-x-x^2)+O(x^(41+1)))
 
 // >Mathematica<
 // LinearRecurrence[{1, 1}, {0, 1}, 41]
