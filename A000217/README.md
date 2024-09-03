@@ -13,7 +13,7 @@ import std.stdio, std.range;
 
 void main() {
     auto a000217 = recurrence!("-a[n-2]+2*a[n-1]+1")(0, 1);
-    //auto a000217 = recurrence!"a[n-3]-3*a[n-2]+3*a[n-1]"(0, 1, 3);
+    // auto a000217 = recurrence!"a[n-3]-3*a[n-2]+3*a[n-1]"(0, 1, 3);
     
     a000217.take(54).writeln;
 }
