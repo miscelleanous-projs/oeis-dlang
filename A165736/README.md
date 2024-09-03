@@ -1,6 +1,6 @@
 # OIES A165736 - Implementations in D
 
-For some reason, I need them at my reach... Mostly to solve miscelleanous *Math'n Code* challenge using my languages of choice. Enjoy!
+For some reason, I need them at my reach... Mostly to solve miscelleanous *Math'n Code* challenge using Dlang my languages of choice. Enjoy!
 
 Hopefully they will be useful for somebody else
 
