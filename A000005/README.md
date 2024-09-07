@@ -1,28 +1,41 @@
-# OEIS [A000108](https://oeis.org/A000108) - Implementation in D
+# OEIS [A000005](https://oeis.org/A000005) - Implementation in D
 
-Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!).
+d(n) (also called tau(n) or sigma_0(n)), the number of divisors of n.
 
 ## Source code
 
-[Sequence](https://dlang.org/library/std/range/sequence.html) with function in string form...
+[Sequence](https://dlang.org/library/std/range/sequence.html) with function in lambda form...
 
 ```d
 import std.stdio;
 import std.range;
+import std.algorithm;
 
+// >pariGP<
+// (22:07) gp > vector(104, n, numdiv(n))
 
-enum strFrmFunc = "a[n-1] * (4*n-2) / (n+1)";
-auto a000108Rec = recurrence!(strFrmFunc)(1uL);
+// >Mathematica<
+// (22:38) gp > vector(104, n, sigma(n, 0))
+
+size_t numdiv(size_t n) {
+    return iota(1, n + 1)
+        .filter!(i => (n) % (i) == 0uL)
+        .walkLength
+        ;
+}
+
+auto a000005Seq = sequence!((a, n) => numdiv(n+1));
 
 void main()
 {
-		a000108Rec.take(31).writeln;
+	const N = 104;
+	a000005Seq.take(N).writeln;
 }
 ```
 
 ## Output
 
 ```text
-[1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, 2674440, 9694845, 35357670, 129644790, 477638700, 1767263190, 6564120420, 24466267020, 91482563640, 343059613650, 1289904147324, 4861946401452, 18367353072152, 69533550916004, 263747951750360, 1002242216651368, 3814986502092304]
+[1, 2, 2, 3, 2, 4, 2, 4, 3, 4, 2, 6, 2, 4, 4, 5, 2, 6, 2, 6, 4, 4, 2, 8, 3, 4, 4, 6, 2, 8, 2, 6, 4, 4, 4, 9, 2, 4, 4, 8, 2, 8, 2, 6, 6, 4, 2, 10, 3, 6, 4, 6, 2, 8, 4, 8, 4, 4, 2, 12, 2, 4, 6, 7, 4, 8, 2, 6, 4, 8, 2, 12, 2, 4, 6, 6, 4, 8, 2, 10, 5, 4, 2, 12, 4, 4, 4, 8, 2, 12, 4, 6, 4, 4, 4, 12, 2, 6, 6, 9, 2, 8, 2, 8]
 
 ```
