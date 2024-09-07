@@ -16,7 +16,7 @@ auto a000108Rec = recurrence!(strFrmFunc)(1uL);
 
 void main()
 {
-		a000108Rec.take(31).writeln;
+    a000108Rec.take(31).writeln;
 }
 ```
 
