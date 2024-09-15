@@ -17,11 +17,11 @@ import std.range;
 // LinearRecurrence[{1, 1, 1}, {1, 1, 1}, 37] 
 
 enum strFrmFunc = "a[n-3]+a[n-2]+a[n-1]";
-auto a0002134Rec = recurrence!(strFrmFunc)(1uL, 1uL, 1uL);
+auto a000213Rec = recurrence!(strFrmFunc)(1uL, 1uL, 1uL);
 
 void main()
 {
-	a0002134Rec.take(37).writeln;
+	a000213Rec.take(37).writeln;
 }
 ```
 
