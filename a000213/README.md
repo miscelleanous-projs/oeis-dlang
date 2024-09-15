@@ -10,6 +10,12 @@ Tribonacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) with a(0) = a(1) =a (2) = 1.
 import std.stdio;
 import std.range;
 
+// >pariGP<
+// (22:57) gp > Vec((1-x)*(1+x)/(1-x-x^2-x^3)+O(x^37))
+
+// >Mathematica<
+// LinearRecurrence[{1, 1, 1}, {1, 1, 1}, 37] 
+
 enum strFrmFunc = "a[n-3]+a[n-2]+a[n-1]";
 auto a0002134Rec = recurrence!(strFrmFunc)(1uL, 1uL, 1uL);
 
